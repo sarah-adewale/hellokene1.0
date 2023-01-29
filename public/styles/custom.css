@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    font-size: 62.2%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: rgba(11, 10, 15, 1);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;
+    align-items: flex-start; */
+    padding: 18px 192px;
+    position: fixed;
+    width: 1512px;
+    height: 80px;
+    background: rgba(11, 10, 15, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+ul {
+    border: 1px solid red;
+}
+
+li {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #FCFCFC;
+    line-height: 2.4rem;
+}
+
+nav,
+.left-nav,
+.left-nav>li,
+.right-nav {
+
+    width: 100%;
+    border: 1px solid green;
+}
+
+.right-nav>li {
+    margin-right: 5%;
+    border: 1px solid yellow;
+
+}
+
+.left-nav {
+    padding-right: 15%;
+}
+
+.right-nav {
+    margin-left: 50%;
+}
+
+.sun-circle {
+    width: 38px;
+    height: 38px;
+    background: #232327;
+    border-radius: 100%;
+}
+
+.left-nav li span,
+.right-nav li span {
+    margin-left: 8%;
+    border: 1px solid blue;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.right-nav li span {
+    margin-left: 0;
+}
+
+i {
+    margin-top: 10%;
+}
+
+.ph-sun-dim-fill {
+    margin: 22% 22%;
+
+}
