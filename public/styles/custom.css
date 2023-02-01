@@ -2,17 +2,18 @@
     box-sizing: border-box;
     font-size: 62.2%;
     font-family: 'DM Sans', sans-serif;
+    margin: 0;
 }
 
 body {
     background-color: rgba(11, 10, 15, 1);
+
 }
 
+/* header section begins*/
 header {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between;
-    align-items: flex-start; */
     padding: 18px 192px;
     position: fixed;
     width: 1512px;
@@ -81,4 +82,53 @@ i {
 .ph-sun-dim-fill {
     margin: 22% 22%;
 
+}
+
+/* header section ends */
+
+/* hero section begins */
+.hero-container {
+    border: 1px solid red;
+    height: 600px;
+    padding: 18px 192px;
+
+}
+
+.profile-section {
+    border: 1px solid red;
+    width: 100%;
+    padding-top: 10%;
+
+}
+
+.hero-text>p {}
+
+.profile-text-section {
+    border: 1px solid red;
+    width: 268px;
+    height: 268px;
+    background: white;
+}
+
+.profile-image {
+    border: 1px solid red;
+    width: 268px;
+    height: 268px;
+    border-radius: 100%;
+
+    background: #282828;
+}
+
+.skills-background {
+    border: 1px solid blue;
+    background: #0B0A0F;
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+}
+
+.divider {
+    width: 0px;
+    height: 18.5px;
+    border: 1px solid #6D6C6F;
 }
