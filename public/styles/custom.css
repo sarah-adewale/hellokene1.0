@@ -22,35 +22,35 @@ header {
     backdrop-filter: blur(8px);
 }
 
-ul {
+/* ul {
     border: 1px solid red;
+} */
+
+li,
+.collectibles,
+.resume {
+    font-weight: 500;
+    color: #FCFCFC;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
 }
 
-li {
-    font-weight: 500;
-    font-size: 1.8rem;
-    color: #FCFCFC;
-    line-height: 2.4rem;
-}
+/* .resume {
+    line-height: 2rem;
+   
+} */
 
 nav,
 .left-nav,
 .left-nav>li,
 .right-nav {
-
     width: 100%;
-    border: 1px solid green;
 }
 
 .right-nav>li {
     margin-right: 5%;
-    border: 1px solid yellow;
-
 }
 
-.left-nav {
-    padding-right: 15%;
-}
 
 .right-nav {
     margin-left: 50%;
@@ -63,20 +63,8 @@ nav,
     border-radius: 100%;
 }
 
-.left-nav li span,
-.right-nav li span {
-    margin-left: 8%;
-    border: 1px solid blue;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.right-nav li span {
-    margin-left: 0;
-}
-
 i {
-    margin-top: 10%;
+    margin-top: 4%;
 }
 
 .ph-sun-dim-fill {
