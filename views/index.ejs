@@ -35,7 +35,7 @@
                 </div>
                 
                 <div class="flex right-nav">
-                    <li class="flex ">
+                    <li class="flex">
                         <i class="ph-file-pdf" style="color: #9D9D9F; font-size: 20px;"></i> 
                         <a href="#"><p class="ml-1.5 pt-2.5 resume">My Resumé</p></a>
                         
@@ -61,35 +61,39 @@
             <!-- profile area -->
             <section class="profile-text-section">
                 <p class="">
-                    Hello. I'm Kene. A product designer with over two (2) years of experience, creating and shipping products people love. 
+                    Hello. I'm Kene. <br> A product designer with over two <br> years of experience; creating and <br> shipping products people love. 
                 </p>
                 <div>
-                    <p>
-                        Press <span>E</span> and learn about my experience <br></br>
-                        Press <span>S</span> and learn about my skills
-                    </p>
+                    <p>Press <a href="" class="keypress-btn">E</a> and learn about my experience</p>
+                    <p>Press <a href="" class="keypress-btn">S</a> and learn about my skills</p>
                 </div>
             </section>
-            <section>
-                <div class="profile-image">
-                    <img src="./images/profile-image.png" alt="an illustration of kene wearing glasses judt off his face">
-
+            <section class="mt-7 profile-section2">
+                <div class="profile-image-section">
+                    <img class="profile-image" src="./images/profile-image.png" alt="an illustration of kene wearing glasses judt off his face">
                 </div>
-                <div class="skills-background">
-                    <a href=""><img src="./images/ae.png" alt=""></a>
+                <div class="flex">
+                    <div class="skills-background ae-btn">
+                        <a href=""><img src="./images/ae.png" class="ae-icon" alt="An image with letters ae in purple gradient on a black background"></a>
+                    </div>
+                    <div class="skills-background ai-btn">
+                        <a href=""><img src="./images/ai.png" class="ai-icon" alt="An image with letters ai in purple gradient on a black background"></a>
+                    </div>
+                    <div class="skills-background ps-btn">
+                        <a href=""><img src="./images/ps.png" class="ps-icon" alt="An image with letters ps in purple gradient on a black background"></a>
+                    </div>
+                    <div class="skills-background figma-btn">
+                        <a href=""><img src="./images/figma-logo.png" class="figma-icon" alt="An image with the figma logo in purple gradient on a black background"></a>
+                    </div>
                 </div>
-                <div class="skills-background">
-                    <a href=""><img src="./images/ai.png" alt=""></a>
-                </div>
-                <div class="skills-background">
-                    <a href=""><img src="./images/ps.png" alt=""></a>
-                </div>
-                <div class="skills-background">
-                    <a href=""><img src="./images/figma-logo.png" alt=""></a>
-                </div>
-                <div>
-                    <p><i class="ph-circle-fill" style="color: green; font-size: 16px;"></i> Leading design at</p> 
-                    <p><img src="./images/pivo-logo.png" alt="an image showing the logo icon for pivo africa in white color"> Pivo Africa</p> 
+                
+                <div class="profile-status mt-16">
+                    <div class="flex">
+                        <i class="ph-circle-fill" style="color: green; font-size: 16px;"></i> 
+                        <p class="profile-status-text mt-2.5">Leading design at</p>
+                    </div>
+                    <img class="mt-2.5" src="./images/pivo-logo.png" alt="an image showing the logo icon for pivo africa in white color"> 
+                    
                 </div>
             </section>
         </section>
@@ -97,58 +101,141 @@
     <!-- end hero section -->
 
     <!-- portfolo section begins-->
-    <section>
-        <ul>
-            <div>
+    <section class="portfolio-container">
+        <ul class="flex">
+            <div class="flex portfolio-category">
                 <li>
-                    <a href="">Highlighted Works</a>
+                    <a href=""> 💡 Highlighted Works</a>
+                </li>
+                <li >
+                    <a class="portfolio-category-text" href="">Designing for Growth</a>
                 </li>
                 <li>
-                    <a href="">Minimum Viable Products</a>
+                    <a class="portfolio-category-text" href="">Minimum Viable Products</a>
                 </li>
                 <li>
-                    <a href="">Designing for Growth</a>
-                </li>
-                <li>
-                    <a href="">Illustrations</a>
+                    <a class="portfolio-category-text" href="">Illustrations</a>
                 </li>
             </div>
 
             <!-- filter section  -->
-            <div>
-                <i class="ph-list-fill" style="color: #9D9D9F; font-size: 16px;"></i>
+            <div class="flex justify-end filter-section mt-5">
+                <i class="ph-list-fill mr-2.5" style="color: white; font-size: 24px;"></i>
                 <span class="divider"></span>
-                <i class="ph-grid-four-thin" style="color: #9D9D9F; font-size: 16px;"></i>
+                <i class="ph-grid-four-thin ml-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
             </div>
             <!-- filter section  -->
 
         </ul>
 
         <!-- portfolio -->
-        <section>
-            <section>
+        <section class="portfolio-card mt-10">
+            <section class="flex">
                 <div>
-                    <img src="" alt="">
+                    <img class="gidigan-image" src="./images/gidigan.png" alt="">
+                </div>
+                <div class="block gidigan-info pl-8">
+                    <p class="gidigan-info-text mt-10">Gidigan</p>
+                    <p class="gidigan-brief mt-5">An online service creators and professionals <br> can use to buy and sell products and services </p>
+                    <div class="flex mt-14">
+                        <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
+                        <p class="ml-2.5 mt-7 timer-text">12 min read</p>
+                    </div>
+                    
                 </div>
                 <div>
-                    <p>Gidigan</p>
-                    <p>An online service creators and professionals can use to buy and sell products and services </p>
-                    <p><i class="ph-timer" style="color: #9D9D9F; font-size: 16px;"></i>12 min read</p>
+                    <div class="flex justify-items-end mt-10 ml-60">
+                        <div class="project-type-btn flex browswer-btn">
+                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                            <p class="browswer-btn-text"> Browser App</p>
+                        </div>
+                        <div class="project-type-btn saas-btn ml-2.5">
+                            <p>SaaS</p>
+                        </div>
+                    </div>
+                    <a class="" href="">
+                        <div class="case-study-btn flex mt-40">
+                            <p>Read case study </p> 
+                            <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        <section class="portfolio-card mt-20">
+            <section class="flex">
+                <div>
+                    <img class="betweysure-image" src="./images/betweysure.png" alt="">
+                </div>
+                <div class="block gidigan-info pl-8">
+                    <p class="gidigan-info-text mt-10">Betweysure</p>
+                    <p class="gidigan-brief mt-5">Betweysure is a football forecast & prediction <br> platform for punters and gamblers </p>
+                    <div class="flex mt-14">
+                        <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
+                        <p class="ml-2.5 mt-7 timer-text">11 min read</p>
+                    </div>
+                     
+                    
                 </div>
                 <div>
-                    <div>
-                       <a href=""> <i class="ph-globe" style="color: #9D9D9F; font-size: 16px;"></i>Browser App</a>
+                    <div class="flex justify-items-end mt-10 ml-60">
+                        <div class="project-type-btn flex browswer-btn">
+                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                            <p class="browswer-btn-text"> Browser App</p>
+                        </div>
+                        <div class="project-type-btn saas-btn ml-2.5">
+                            <p>Sports</p>
+                        </div>
                     </div>
-                    <div>
-                        <a href="">SaaS</a>
-                    </div>
-                    <div>
-                        <a href="">Read case study <i class="ph-arrow-line-up-right" style="color: #9D9D9F; font-size: 16px;"></i></a>
-                    </div>
+                    
+                    <a class="" href="">
+                        <div class="case-study-btn flex mt-40">
+                            <p>Read case study </p> 
+                            <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
+                        </div>
+                    </a>
                     
                 </div>
             </section>
         </section>
+
+        <section class="portfolio-card mt-20">
+            <section class="flex">
+                <div>
+                    <img class="liberterra-image" src="./images/liberterra.png" alt="">
+                </div>
+                <div class="block gidigan-info pl-8">
+                    <p class="gidigan-info-text mt-10">LiberTerra</p>
+                    <p class="gidigan-brief mt-5">A secure platform for property sales & <br> management services in Nigeria and the UK </p>
+                    <div class="flex mt-14">
+                        <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
+                        <p class="ml-2.5 mt-7 timer-text">8 min read</p>
+                    </div>
+                    
+                </div>
+                <div>
+                    <div class="flex justify-items-end mt-10 ml-60">
+                        <div class="project-type-btn flex browswer-btn">
+                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                            <p class="browswer-btn-text"> Browser App</p>
+                        </div>
+                        <div class="project-type-btn saas-btn ml-2.5">
+                            <p>Real Estate</p>
+                        </div>
+                    </div>
+                    
+                    <a class="" href="">
+                        <div class="case-study-btn flex mt-40">
+                            <p>Read case study </p> 
+                            <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
+                        </div>
+                    </a>
+                    
+                </div>
+            </section>
+        </section>
+        
 
          <!-- portfolio grid hidden by default-->
         <section>
