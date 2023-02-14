@@ -192,8 +192,8 @@ i {
 }
 
 .portfolio-container {
-    /* border: 1px solid red; */
-    height: 1200px;
+
+    height: 900px;
     padding: 18px 192px;
 }
 
@@ -231,6 +231,12 @@ i {
     width: 100%;
     border: 1px solid #CFCCCC;
     border-radius: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    display: block;
 }
 
 .gidigan-image,
@@ -239,10 +245,6 @@ i {
     border-radius: 16px 0 0 16px;
 }
 
-.gidigan-info {
-    /* border: 1px solid blue; */
-
-}
 
 .gidigan-info-text {
     font-style: normal;
@@ -257,7 +259,10 @@ i {
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: #9D9D9F;
+    max-width: 100%;
 }
+
+
 
 .timer-text {
     font-weight: 400;
@@ -295,7 +300,7 @@ i {
     border: 1px solid #9D9D9F;
     box-shadow: -1px -1px 8px rgba(255, 255, 255, 0.3), 1px 1px 8px rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    margin-left: 166px;
+    /* margin-left: 166px; */
 }
 
 .case-study-btn p {
@@ -304,4 +309,85 @@ i {
     font-size: 1.6rem;
     line-height: 2.4rem;
     color: #9D9D9F;
+}
+
+.left-margin {
+    margin-left: 143px;
+}
+
+.portfolio-grid {
+    display: none;
+    width: 500px;
+    height: 217px;
+    border: 1px solid #CFCCCC;
+    border-radius: 16px;
+    background: url(./gidigan-grid.png);
+}
+
+.portfolio-grid-betweysure {
+    background: url(./betweysure-grid.png);
+}
+
+.portfolio-grid-liberterra {
+    background: url(./liberterra-grid.png);
+}
+
+.portfolio-grid-info {
+    width: 498px;
+    height: 88px;
+    background: rgba(11, 10, 15, 0.8);
+    backdrop-filter: blur(4px);
+    /* z-index: 1; */
+    border-radius: 0 0 16px 16px;
+    margin-top: 127px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.gidigan-grid-info-text {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    height: 264px;
+    text-align: center;
+}
+
+.footer-text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    color: #CECECF;
+}
+
+.footer-text-two {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+
+    color: #9D9D9F;
+}
+
+.copyrights,
+.copyrights a {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #9D9D9F;
+}
+
+.copyrights a {
+
+    color: #CECECF;
+    text-decoration: underline;
 }
