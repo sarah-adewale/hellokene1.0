@@ -236,7 +236,7 @@ i {
     align-items: center;
     padding: 0px;
     gap: 8px;
-    display: block;
+    display: none;
 }
 
 .gidigan-image,
@@ -316,7 +316,7 @@ i {
 }
 
 .portfolio-grid {
-    display: none;
+    display: block;
     width: 500px;
     height: 217px;
     border: 1px solid #CFCCCC;
