@@ -70,7 +70,7 @@ Figma is an easy to use design tool
 #### Why was this stack chosen?
 Figma is an easy to use design tool
 
-### EJS:
+### Nodejs:
 #### Why was this stack chosen?
 Figma is an easy to use design tool
 
