@@ -1,22 +1,17 @@
 
-[![build](https://img.shields.io/scrutinizer/build/g/sarah-adewale/Vendirr)](https://github.com/sarah-adewale/Vendirr)
+
+![site-icon](https://user-images.githubusercontent.com/49436342/220751132-e77e46a7-c70a-44ae-9604-3c964fe9d4a9.png)
+
+**Live Website:** [https://venddir.cyclic.app/](https://venddir.cyclic.app/)
+
+Venddir is an online directory for vendors. As with any directory, its core function is listing - alphabetically or thematically with details such as names, addresses, and phone numbers, - all vendors who have opted to showcase their business information on the platform.
+
+Users can sign up either as a client or a vendor. Clients can change their avatars, view vendors, and bookmark vendors. Vendors can create their business profile with all their business details, bookmark other vendors, view other vendors, and change business logo. 
 
 
-![site-icon](https://user-images.githubusercontent.com/49436342/220295370-65281967-72ab-4e69-a764-f690a74d892f.png)
+![Screen Shot 2023-01-14 at 1 07 53 AM](https://user-images.githubusercontent.com/49436342/220752725-5b2e168d-4156-41fc-8c6e-0d426fc20c79.png)
 
-
-# Hello Kene - A designer's portfolio
-
-
-# Project Description
-This is a redesign of Kene's portfolio. Check out the initial design here - https://github.com/sarah-adewale/hello-kene. Decided to redesign with a backend server. 
-
-## Link to Project: 
-
-![Screen Shot 2023-01-14 at 1 07 53 AM](https://user-images.githubusercontent.com/49436342/220294151-1e62363a-4855-4574-a1b0-71166409801c.png)
-
-
-## Run Locally
+## How To Run Application
 
 Clone the project
 
@@ -51,36 +46,35 @@ Start Tailwind
 
 ## Tech Used: 
 
-**Client:** FIGMA, EJS, TailwindCSS
+## Client: FIGMA, EJS, TailwindCSS
 
+**Figma:**
+#### Why was this tool chosen?
 
-**Server:** Node, Express 
+Figma is an easy to use design tool. I wanted a tool that would help with a hiFi view of what my idea was. Figma was used for logo, whiteboarding, site map, wireframes and prototyping. 
 
-
-### Figma:
+**EJS:**
 #### Why was this stack chosen?
+I used EJS for my view. I wanted a chance to use a new tool that looked kinda similar to html and javascript. EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. 
 
-Figma is an easy to use design tool
-
-### EJS:
+**Tailwind:**
 #### Why was this stack chosen?
-Figma is an easy to use design tool
+Tailwind is a "utility-first CSS framework" which provides several of these opinionated, single-purpose utility classes that you can use directly inside your markup to design an element. Tailwind is simply a fast and easy way to create your designs
 
-### Tailwind:
+## Server: Node, Express
+
 #### Why was this stack chosen?
-Figma is an easy to use design tool
+I used the MVC (Model, View, Controller) Architecture for my backend. MVC is an architectural design pattern used in web development. MVC helped me with structure and separation of concerns. I have my database and passport method in the config folder. My server method in the controller folder. The model folder has the database schema. My view in the view folder (used partial to handle reusable pieces of code). Public folder has all my styles(tailwind and custom css). I have my routes in the routes folder and basically connected everything in my server.js file. 
 
-### Nodejs:
-#### Why was this stack chosen?
-Figma is an easy to use design tool
+Node is a pretty lightweight server choice and can be spun up fairly easily. I needed a backend that could send a different response based on the result of another controller. 
 
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+By using Express' built in middleware architecture we could cleanly write fallbacks. MongoDB is used to handle databases, on venddir although users can browse through different vendors without signing in, when a user signs in, mongoDB is used to handle the user tables. I used Mongoose to handle my database schema. 
 
 
 ## Optimizations
 
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
+
+
+
+
 
