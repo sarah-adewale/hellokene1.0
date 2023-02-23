@@ -2,7 +2,7 @@
 
 ![site-icon](https://user-images.githubusercontent.com/49436342/220751132-e77e46a7-c70a-44ae-9604-3c964fe9d4a9.png)
 
-**Live Website:** https://hello-kene.cyclic.app/ 
+**Live Website:** https://hellokene.cyclic.app/
 
 This is a re-design of Kene's Portfolio. Check out the initial design here => https://github.com/sarah-adewale/hello-kene
 
