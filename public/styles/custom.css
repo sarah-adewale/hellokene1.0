@@ -20,6 +20,7 @@ header {
     height: 80px;
     background: rgba(11, 10, 15, 0.3);
     backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
 li,
@@ -66,7 +67,6 @@ i {
 
 /* hero section begins */
 .hero-container {
-    /* border: 1px solid red; */
     height: 600px;
     padding: 18px 192px;
 
@@ -118,12 +118,93 @@ i {
 }
 
 .skills-background {
-    /* border: 1px solid blue; */
+
     background: #0B0A0F;
     width: 54px;
     height: 54px;
     border-radius: 100%;
 
+}
+
+.live-btn {
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background-color: green;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-left: 140px;
+}
+
+@-webkit-keyframes glowing {
+    0% {
+
+        -webkit-box-shadow: 0 0 3px green;
+    }
+
+    50% {
+
+        -webkit-box-shadow: 0 0 20px green;
+    }
+
+    100% {
+
+        -webkit-box-shadow: 0 0 3px green;
+    }
+}
+
+@-moz-keyframes glowing {
+    0% {
+
+        -moz-box-shadow: 0 0 3px green;
+    }
+
+    50% {
+
+        -moz-box-shadow: 0 0 20px green;
+    }
+
+    100% {
+
+        -moz-box-shadow: 0 0 3px green;
+    }
+}
+
+@-o-keyframes glowing {
+    0% {
+
+        box-shadow: 0 0 3px green;
+    }
+
+    50% {
+
+        box-shadow: 0 0 20px green;
+    }
+
+    100% {
+
+        box-shadow: 0 0 3px green;
+    }
+}
+
+@keyframes glowing {
+    0% {
+
+        box-shadow: 0 0 3px green;
+    }
+
+    50% {
+
+        box-shadow: 0 0 20px green;
+    }
+
+    100% {
+
+        box-shadow: 0 0 3px green;
+    }
 }
 
 .ae-btn {
