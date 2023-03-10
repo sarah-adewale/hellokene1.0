@@ -193,7 +193,7 @@ i {
 
 .portfolio-container {
 
-    height: 900px;
+    /* height: 900px; */
     padding: 18px 192px;
 }
 
@@ -219,6 +219,10 @@ i {
     color: #979494;
 }
 
+.filter-section:hover {
+    cursor: pointer;
+}
+
 .divider {
     margin-top: 6px;
     width: 0px;
@@ -236,7 +240,7 @@ i {
     align-items: center;
     padding: 0px;
     gap: 8px;
-    display: none;
+    display: block;
 }
 
 .gidigan-image,
