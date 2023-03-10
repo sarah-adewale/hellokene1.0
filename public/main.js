@@ -13,7 +13,6 @@ window.onload = function(){
 
 //filter
 trayFilterBtn.addEventListener('click', function(){
-    console.log('it works')
     if(tray){
         tray.style.display = 'block'
         grid.style.display = 'none'
@@ -23,13 +22,13 @@ trayFilterBtn.addEventListener('click', function(){
 })
 
 gridFilterBtn.addEventListener('click', function(){
-    console.log('it fucking works')
     if(grid){
         tray.style.display = 'none'
         grid.style.display = 'block'
-        document.querySelector('.ph-list-fill').style.color = '#9D9D9F'
-        document.querySelector('.ph-grid-four-thin').style.color = 'white'
+        trayFilterIcon.style.color = '#9D9D9F'
+        gridFilterIcon.style.color = 'white'
     }
+
 })
 
 
