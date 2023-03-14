@@ -546,6 +546,18 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
+.mt-3\.5 {
+  margin-top: 0.875rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
+}
+.mr-10 {
+  margin-right: 2.5rem;
+}
+.mr-60 {
+  margin-right: 15rem;
+}
 .block {
   display: block;
 }
