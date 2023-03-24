@@ -48,20 +48,21 @@ gridFilterBtn.addEventListener('click', () => {
 
 //about
 document.addEventListener("keydown", (e) => {
-
-  if (e.key === 'e') {
+    let name = e.key
+    name = name.toLowerCase()
+  if (name === 'e') {
     workHistory.style.display = 'block'
     aboutBio.style.display = 'none'
     skill.style.display = 'none'
   }
 
-   if (e.key === 's') {
+   if (name === 's') {
     workHistory.style.display = 'none'
     aboutBio.style.display = 'none'
     skill.style.display = 'block'
   }
 
-   if (e.key === 'r') {
+   if (name === 'r') {
     workHistory.style.display = 'none'
     aboutBio.style.display = 'block'
     skill.style.display = 'none'
