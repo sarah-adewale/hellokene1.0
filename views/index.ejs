@@ -59,31 +59,78 @@
     <section class="flex hero-container">
         <section class="flex profile-section">
             <!-- profile area -->
-            <section class="profile-text-section">
-                <p class="">
-                    Hello. I'm Kene. <br> A product designer with over two <br> years of experience; creating and <br> shipping products people love. 
-                </p>
-                <div>
-                    <p>Press <a href="" class="keypress-btn">E</a> and learn about my experience</p>
-                    <p>Press <a href="" class="keypress-btn">S</a> and learn about my skills</p>
+            <section>
+                
+                <div class="profile-text-section" id="about-bio">
+                    <p class="">
+                        Hello. I'm Kene. <br> A product designer with over two <br> years of experience; creating and <br> shipping products people love. 
+                    </p>
+                    <div>
+                        <p>Press <a href="" class="keypress-btn" id="keypress-btn">E</a> to learn about my experience</p>
+                        <p>Press <a href="" class="keypress-btn">S</a> to learn about my skills</p>
+                    </div>
                 </div>
+                
+                <!-- hidden by default -->
+                <div class="work-history" id="work-history">
+                    <div class="profile-text-section">
+                        <p class="experience-text">
+                            Since 2020, I’ve worked directly with founding <br> members and teams – in real estate, sports analytics, <br> creator economy, venture capital and most recently, <br> supply chain finance – through all phases of the <br> product development cycle to iteratively build and <br>  maintain products that scale with the business.
+                        </p>
+                        <p class="article-text">See article: <span> Pivo raises $2 million seed round</span> . Aug 28, 2022</p>
+                    </div>
+                 
+                    <div class="mt-10">
+                        <p class="experience-text-2 mb-10 reset-text">Press <a href="" class="keypress-btn reset-btn">R</a> to reset</p>
+                        <p class="experience-text-2">Press <a href="" class="keypress-btn">S</a> to learn about my skills</p>
+                    </div>
+
+                </div>
+                
+                <div class="skill" id="skill">
+                    <div class="profile-text-section">
+                        <p class="experience-text">
+                            As a professional designer, I am skilled at finding creative solutions to problems, thinking outside the box, and effectively organising my work. My passion for design is evident in my portfolio which showcases the value I can bring to any team. Hover on some of my favourite design tools 👉🏾 to see how we can use them to create magic together
+                        </p>
+                        <div class="">
+                            <p class="experience-text3">Press <a href="" class="keypress-btn">E</a> to learn more about my experience</p>
+                            <p class="reset-text">Press <a href="" class="keypress-btn reset-btn">R</a> to reset</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </section>
-            <section class="mt-7 profile-section2">
+
+            <section class="profile-section2">
                 <div class="profile-image-section">
                     <img class="profile-image" src="./images/profile-image.png" alt="an illustration of kene wearing glasses judt off his face">
                 </div>
                 <div class="flex">
-                    <div class="skills-background ae-btn">
-                        <a href=""><img src="./images/ae.png" class="ae-icon" alt="An image with letters ae in purple gradient on a black background"></a>
+                    <div class="skills-background ae-btn" id="ae-btn">
+                        <a href=""><img src="./images/ae.png" class="ae-icon" alt="An image with letters ae in purple gradient on a black background"></a>   
+                        <div class="ae-text" id="ae-text">
+                            <p>I’ve dedicated time to mastering all of After Effects’ compositing, animation, and special effects tools, and have used them to create engaging content in form of gifs and videos.</p>
+                        </div>
                     </div>
-                    <div class="skills-background ai-btn">
+                    
+                    <div class="skills-background ai-btn" id="ai-btn">
                         <a href=""><img src="./images/ai.png" class="ai-icon" alt="An image with letters ai in purple gradient on a black background"></a>
+                        <div class="ai-text" id="ai-text">
+                            <p>I’ve spent almost four (4) years creating high-quality designs using Adobe Illustrator’s vector graphics tools ranging from captivating brand identities to digital illustrations and custom art</p>
+                        </div>
                     </div>
-                    <div class="skills-background ps-btn">
+                    <div class="skills-background ps-btn" id="ps-btn">
                         <a href=""><img src="./images/ps.png" class="ps-icon" alt="An image with letters ps in purple gradient on a black background"></a>
+                        <div class="ps-text" id="ps-text">
+                            <p>Over the past three (3) years, I have used Photoshop’s photo manipulation  and mock-up tools to create stunning visual designs for a wide range of projects</p>
+                        </div>
                     </div>
-                    <div class="skills-background figma-btn">
+                    <div class="skills-background figma-btn" id="figma-btn">
                         <a href=""><img src="./images/figma-logo.png" class="figma-icon" alt="An image with the figma logo in purple gradient on a black background"></a>
+                        <div class="figma-text" id="figma-text">
+                            <p>Intensive use and understanding of Figma’s collaboration and prototyping features have helped me deliver functional interfaces and experiences  with cross-functional teams.</p>
+                        </div>
                     </div>
                 </div>
                 
@@ -101,7 +148,7 @@
     <!-- end hero section -->
 
     <!-- portfolo section begins-->
-    <section class="portfolio-container mb-40">
+    <section class="portfolio-container mb-40 mt-20">
         <ul class="flex">
             <div class="flex portfolio-category">
                 <li>
@@ -330,6 +377,7 @@
 
     <!-- footer begins -->
     <footer class="mt-12 mb-40">
+        
         <h2 class="footer-text">
             Enjoying yourself? 😅
         </h2>
@@ -343,6 +391,9 @@
             <a href=""><i class="ph-linkedin-logo" style="color: #9D9D9F; font-size: 50px;"></i></a>
         </div>
         <p class="copyrights">Designed by Me <span class="divider mr-5 ml-2.5"></span> Developed by <a href=""> Sarah</a></p>
+        <!-- <div class="cta" style="border: 1px solid red;">
+            <i class="ph-bold ph-arrow-circle-up" style="color: #FCFCFC; font-size: 32px;"></i>
+        </div> -->
     </footer>
 
     <!-- footer ends -->

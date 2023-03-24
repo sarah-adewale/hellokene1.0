@@ -4,15 +4,29 @@ const tray = document.getElementById('tray')
 const grid = document.getElementById('grid')
 const trayFilterIcon = document.querySelector('.ph-list-fill')
 const gridFilterIcon = document.querySelector('.ph-grid-four-thin')
+const workHistory = document.getElementById('work-history')
+const skill = document.getElementById('skill')
+const aboutBio = document.getElementById('about-bio')
+const aeBtn = document.getElementById('ae-btn') 
+const aeText = document.getElementById('ae-text')
+const aiText = document.getElementById('ai-text')
+const aiBtn = document.getElementById('ai-btn')
+const psBtn = document.getElementById('ps-btn')
+const figmaBtn = document.getElementById('figma-btn')
+const psText = document.getElementById('ps-text')
+const figmaText = document.getElementById('figma-text')
+
 
 
 //page load
-window.onload = function(){
+window.onload = () => {
     grid.style.display = 'none'
+   
 }
 
+
 //filter
-trayFilterBtn.addEventListener('click', function(){
+trayFilterBtn.addEventListener('click', () => {
     if(tray){
         tray.style.display = 'block'
         grid.style.display = 'none'
@@ -21,7 +35,7 @@ trayFilterBtn.addEventListener('click', function(){
     }
 })
 
-gridFilterBtn.addEventListener('click', function(){
+gridFilterBtn.addEventListener('click', () => {
     if(grid){
         tray.style.display = 'none'
         grid.style.display = 'block'
@@ -32,3 +46,59 @@ gridFilterBtn.addEventListener('click', function(){
 })
 
 
+//about
+document.addEventListener("keydown", (e) => {
+
+  if (e.key === 'e') {
+    workHistory.style.display = 'block'
+    aboutBio.style.display = 'none'
+    skill.style.display = 'none'
+  }
+
+   if (e.key === 's') {
+    workHistory.style.display = 'none'
+    aboutBio.style.display = 'none'
+    skill.style.display = 'block'
+  }
+
+   if (e.key === 'r') {
+    workHistory.style.display = 'none'
+    aboutBio.style.display = 'block'
+    skill.style.display = 'none'
+  }
+  
+});
+
+aeBtn.addEventListener('mousemove', () => {
+        aeText.style.display = "block"
+})
+
+aeBtn.addEventListener('mouseout', () => {
+        aeText.style.display = "none"
+})
+
+aiBtn.addEventListener('mousemove', () => {
+        aiText.style.display = "block"
+})
+
+aiBtn.addEventListener('mouseout', () => {
+        aiText.style.display = "none"
+})
+
+// ps
+psBtn.addEventListener('mousemove', () => {
+        psText.style.display = "block"
+})
+
+psBtn.addEventListener('mouseout', () => {
+        psText.style.display = "none"
+})
+
+// figma
+figmaBtn.addEventListener('mousemove', () => {
+        figmaText.style.display = "block"
+})
+
+figmaBtn.addEventListener('mouseout', () => {
+        figmaText.style.display = "none"
+})
