@@ -24,82 +24,119 @@ window.onload = () => {
    
 }
 
-
-//filter
-trayFilterBtn.addEventListener('click', () => {
+// filter
+const addFilterEvents = (trayFilterBtn, gridFilterBtn, tray, grid, trayFilterIcon, gridFilterIcon) => {
+  trayFilterBtn.addEventListener('click', () => {
     if(tray){
-        tray.style.display = 'block'
-        grid.style.display = 'none'
-        trayFilterIcon.style.color = 'white'
-        gridFilterIcon.style.color = '#9D9D9F'
+      tray.style.display = 'block'
+      grid.style.display = 'none'
+      trayFilterIcon.style.color = 'white'
+      gridFilterIcon.style.color = '#9D9D9F'
     }
-})
-
-gridFilterBtn.addEventListener('click', () => {
+  });
+  
+  gridFilterBtn.addEventListener('click', () => {
     if(grid){
-        tray.style.display = 'none'
-        grid.style.display = 'block'
-        trayFilterIcon.style.color = '#9D9D9F'
-        gridFilterIcon.style.color = 'white'
+      tray.style.display = 'none'
+      grid.style.display = 'block'
+      trayFilterIcon.style.color = '#9D9D9F'
+      gridFilterIcon.style.color = 'white'
     }
-
-})
+  });
+};
+addFilterEvents(trayFilterBtn, gridFilterBtn, tray, grid, trayFilterIcon, gridFilterIcon);
 
 
 //about
-document.addEventListener("keydown", (e) => {
-    let name = e.key
-    name = name.toLowerCase()
+const handleKeyPress = (event) => {
+
+  let name = event.key.toLowerCase();
   if (name === 'e') {
-    workHistory.style.display = 'block'
-    aboutBio.style.display = 'none'
-    skill.style.display = 'none'
+    workHistory.style.display = 'block';
+    aboutBio.style.display = 'none';
+    skill.style.display = 'none';
+  } else if (name === 's') {
+    workHistory.style.display = 'none';
+    aboutBio.style.display = 'none';
+    skill.style.display = 'block';
+  } else if (name === 'r') {
+    workHistory.style.display = 'none';
+    aboutBio.style.display = 'block';
+    skill.style.display = 'none';
   }
 
-   if (name === 's') {
-    workHistory.style.display = 'none'
-    aboutBio.style.display = 'none'
-    skill.style.display = 'block'
-  }
+};
 
-   if (name === 'r') {
-    workHistory.style.display = 'none'
-    aboutBio.style.display = 'block'
-    skill.style.display = 'none'
-  }
+document.addEventListener("keydown", handleKeyPress);
+
+
+// document.addEventListener("keydown", (e) => {
+//   const map = {
+//     'e': ['block', 'none', 'none'],
+//     'r': ['none', 'block', 'none'],
+//     's': ['none', 'none', 'block'],
+    
+//   };
+//   const [work, bio, skill] = map[e.key.toLowerCase()] || [];
+//   if (work) {
+//     workHistory.style.display = work;
+//     aboutBio.style.display = bio;
+//     skill.style.display = skill;
+//   }
+// });
+
+// ae events
+const aeMouseEvents = (element, textElement) => {
+  element.addEventListener('mousemove', () => {
+    textElement.style.display = "block";
+  });
   
-});
+  element.addEventListener('mouseout', () => {
+    textElement.style.display = "none";
+  });
+};
 
-aeBtn.addEventListener('mousemove', () => {
-        aeText.style.display = "block"
-})
+aeMouseEvents(aeBtn, aeText);
 
-aeBtn.addEventListener('mouseout', () => {
-        aeText.style.display = "none"
-})
 
-aiBtn.addEventListener('mousemove', () => {
-        aiText.style.display = "block"
-})
+// ai event
+const aiMouseEvents = (element, textElement) => {
+  element.addEventListener('mousemove', () => {
+    textElement.style.display = "block";
+  });
+  
+  element.addEventListener('mouseout', () => {
+    textElement.style.display = "none";
+  });
+};
 
-aiBtn.addEventListener('mouseout', () => {
-        aiText.style.display = "none"
-})
+aiMouseEvents(aiBtn, aiText);
 
-// ps
-psBtn.addEventListener('mousemove', () => {
-        psText.style.display = "block"
-})
+// ps event
+const psMouseEvents = (element, textElement) => {
+  element.addEventListener('mousemove', () => {
+    textElement.style.display = "block";
+  });
+  
+  element.addEventListener('mouseout', () => {
+    textElement.style.display = "none";
+  });
+};
 
-psBtn.addEventListener('mouseout', () => {
-        psText.style.display = "none"
-})
+psMouseEvents(psBtn, psText);
 
-// figma
-figmaBtn.addEventListener('mousemove', () => {
-        figmaText.style.display = "block"
-})
+// figma event
+const figmaMouseEvents = (element, textElement) => {
+  element.addEventListener('mousemove', () => {
+    textElement.style.display = "block";
+  });
+  
+  element.addEventListener('mouseout', () => {
+    textElement.style.display = "none";
+  });
+};
 
-figmaBtn.addEventListener('mouseout', () => {
-        figmaText.style.display = "none"
-})
+figmaMouseEvents(figmaBtn, figmaText);
+
+
+
