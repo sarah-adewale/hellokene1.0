@@ -176,6 +176,11 @@ i {
     height: 54px;
     border-radius: 100%;
 
+
+}
+
+.ae-btn-hover:hover {
+    background: #00005B;
 }
 
 .live-btn {
@@ -259,25 +264,42 @@ i {
     }
 }
 
-.ae-btn {
+.ae-btn,
+.ae-icon-hover {
     margin-top: -285px;
     margin-left: 40px;
-
+    transition: 0.3s;
+    display: 1px solid red;
 }
 
-.ai-btn {
+.ai-btn,
+.ai-icon-hover {
     margin-top: -225px;
+    transition: 0.3s;
     margin-left: 140px;
 }
 
-.ps-btn {
+.ps-btn,
+.ps-icon-hover {
     margin-top: -65px;
     margin-left: -80px;
+    transition: 0.3s;
+}
+
+.ps-icon-hover {
+    margin-left: 15px;
+    margin-top: -18px;
+    display: none;
+}
+
+.ps-btn-hover:hover {
+    background: #001E36;
 }
 
 .figma-btn {
     margin-top: -105px;
     margin-left: -270px;
+    transition: 0.3s;
 }
 
 .ae-icon {
@@ -286,20 +308,53 @@ i {
     /* border: 1px solid red; */
 }
 
+.ae-icon-hover {
+    margin-left: 10px;
+    margin-bottom: 13px;
+    margin-top: 15px;
+    /* border: 1px solid red; */
+    display: none;
+
+}
+
+.ai-icon-hover {
+    margin-left: 15px;
+    margin-bottom: 13px;
+    margin-top: 15px;
+    display: none;
+}
+
+.ai-btn-hover:hover {
+    background: #330000;
+}
+
 .ai-icon,
 .ps-icon,
-.figma-icon {
+.figma-icon,
+.figma-icon-hover {
     margin-top: 15px;
     margin-left: 15px;
+
     /* border: 1px solid red; */
 }
 
-.figma-icon {
+.figma-icon,
+.figma-icon-hover {
     margin-left: 17px;
 }
 
 .profile-section2 {
     margin-left: 120px;
+}
+
+.figma-icon-hover {
+    margin-top: 14px;
+    display: none;
+
+}
+
+.figma-btn-hover:hover {
+    background: #2C2F42;
 }
 
 .profile-status-text {
@@ -590,15 +645,21 @@ footer {
     font-style: normal;
     font-weight: 400;
     right: 27rem;
+    transition: 0.3s;
 }
+
+
 
 .ps-text,
 .figma-text {
     bottom: 9px;
 }
 
-.figma-text {
+.ps-text {
+    top: 5px
+}
 
+.figma-text {
     right: 24rem;
 }
 

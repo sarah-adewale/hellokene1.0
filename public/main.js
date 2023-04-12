@@ -15,9 +15,13 @@ const psBtn = document.getElementById('ps-btn')
 const figmaBtn = document.getElementById('figma-btn')
 const psText = document.getElementById('ps-text')
 const figmaText = document.getElementById('figma-text')
-
-
-
+const aeIconHover = document.getElementById('ae-icon-hover')
+const aeIcon = document.getElementById('ae-icon')
+const aiIcon = document.getElementById('ai-icon')
+const aiIconHover = document.getElementById('ai-icon-hover')
+const psIconHover = document.getElementById('ps-icon-hover')
+const figmaIconHover = document.getElementById('figma-icon-hover')
+const figmaIcon = document.getElementById('figma-icon')
 //page load
 window.onload = () => {
     grid.style.display = 'none'
@@ -89,10 +93,15 @@ document.addEventListener("keydown", handleKeyPress);
 const aeMouseEvents = (element, textElement) => {
   element.addEventListener('mousemove', () => {
     textElement.style.display = "block";
+    aeIconHover.style.display = "block"
+    aeIcon.style.display = "none"
+    
   });
   
   element.addEventListener('mouseout', () => {
     textElement.style.display = "none";
+    aeIconHover.style.display = "none"
+    aeIcon.style.display = "block"
   });
 };
 
@@ -103,10 +112,14 @@ aeMouseEvents(aeBtn, aeText);
 const aiMouseEvents = (element, textElement) => {
   element.addEventListener('mousemove', () => {
     textElement.style.display = "block";
+    aiIconHover.style.display = "block"
+    aiIcon.style.display = "none"
   });
   
   element.addEventListener('mouseout', () => {
     textElement.style.display = "none";
+    aiIconHover.style.display = "none"
+    aiIcon.style.display = "block"
   });
 };
 
@@ -116,10 +129,12 @@ aiMouseEvents(aiBtn, aiText);
 const psMouseEvents = (element, textElement) => {
   element.addEventListener('mousemove', () => {
     textElement.style.display = "block";
+    psIconHover.style.display = "block"
   });
   
   element.addEventListener('mouseout', () => {
     textElement.style.display = "none";
+    psIconHover.style.display = "none"
   });
 };
 
@@ -129,10 +144,14 @@ psMouseEvents(psBtn, psText);
 const figmaMouseEvents = (element, textElement) => {
   element.addEventListener('mousemove', () => {
     textElement.style.display = "block";
+    figmaIconHover.style.display = "block"
+    figmaIcon.style.display = "none"
   });
   
   element.addEventListener('mouseout', () => {
     textElement.style.display = "none";
+    figmaIconHover.style.display = "none"
+    figmaIcon.style.display = "block"
   });
 };
 
