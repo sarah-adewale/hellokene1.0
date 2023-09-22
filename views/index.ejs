@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/tailwind.css">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/custom.css">
@@ -26,23 +29,25 @@
             <ul class="flex justify-between">
                 <div class="flex left-nav">
                     <li>
-                        <a class=""  href="#"><img src="./images/logo-white2.png" alt="kene's logo; the letter K in white color"></a>
+                        <a class=""  href="/"><img src="./images/logo-white2.png" alt="kene's logo; the letter K in white color"></a>
                     </li>
-                    <li class="flex mr-60">
+
+                    <!-- will be available soon -->
+                    <!-- <li class="flex mr-60">
                         <i class="ph-gift" style="color: #9D9D9F; font-size: 20px;"></i> 
                         <a href="#"><p class="ml-2.5 pt-2.5 mr-2.5 collectibles">Collectibles</p></a>
-                    </li>
+                    </li> -->
                 </div>
                 
                 <div class="flex right-nav">
                     <li class="flex">
                         <i class="ph-file-pdf mt-2.5 mr-2.5" style="color: #9D9D9F; font-size: 20px;"></i> 
-                        <a href="#"><p class="ml-1.5 pt-2.5 resume">My Resumé</p></a>
+                        <a href="./images/Kenenna's-Resume.pdf" target="_blank"><p class="ml-1.5 pt-2.5 resume">My Resumé</p></a>
                         
                     </li>
                     <li class="flex">
                         <i class="ph-envelope-open mt-2.5 mr-2.5" style="color: #9D9D9F; font-size: 20px;"></i>
-                        <a class="" href="#"><p class="ml-1.5 pt-2 resume">Contact</p></a>
+                        <a class="" href="mailto:akenenna@gmail.com"><p class="ml-1.5 pt-2 resume">Contact</p></a>
                     </li>
                     <div class="sun-circle">
                         <li>
@@ -63,7 +68,7 @@
                 
                 <div class="profile-text-section" id="about-bio">
                     <p class="">
-                        Hello. I'm Kene. <br> A product designer with over two <br> years of experience; creating and <br> shipping products people love. 
+                        Hello. I'm Kene. <br> A product designer with four <br> years of experience, creating and <br> shipping products people love. 
                     </p>
                     <div>
                         <p>Press <a href="" class="keypress-btn" id="keypress-btn">E</a> to learn about my experience</p>
@@ -160,14 +165,16 @@
         <ul class="flex">
             <div class="flex portfolio-category">
                 <li>
-                    <a href=""> 💡 Highlighted Works</a>
+                    <a href="" class="active"> 💡 Highlighted Works</a>
                 </li>
                 <li >
-                    <a class="portfolio-category-text" href="">Designing for Growth</a>
+                    <a class="portfolio-category-text" href="">Growth Design</a>
                 </li>
                 <li>
-                    <a class="portfolio-category-text" href="">Minimum Viable Products</a>
+                    <a class="portfolio-category-text" href="">Product Design</a>
                 </li>
+
+                <!-- will be available soon -->
                 <li>
                     <a class="portfolio-category-text" href="">Illustrations</a>
                 </li>
@@ -185,7 +192,77 @@
 
         <!-- portfolio -->
         <section id="tray">
+
             <section class="portfolio-card mt-10">
+                <section class="flex">
+                    <div>
+                        <img class="gidigan-image" src="./images/pivo.png" alt="">
+                    </div>
+                    <div class="gidigan-info pl-8">
+                        <p class="gidigan-info-text mt-10">Pivo</p>
+                        <p class="gidigan-brief mt-5">A finance platform, providing credit and <br> business  tools to supply chain SMEs.</p> 
+                        <div class="flex mt-14">
+                            <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
+                            <p class="ml-2.5 mt-7 timer-text">--</p>
+                        </div>
+                        
+                    </div>
+                    <div class="grid justify-items-end ml-56">
+                        <div class="flex mt-10">
+                            <div class="project-type-btn flex browser-btn">
+                                <i class="ph ph-app-window mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                <p class="browser-btn-text"> Web & Mobile Apps</p>
+                            </div>
+                            <div class="project-type-btn saas-btn ml-2.5">
+                                <p>PaaS</p>
+                            </div>
+                        </div>
+                        <a class="" href="https://pivo.africa" target="_blank">
+                            <div class="case-study-btn flex mt-28">
+                                <p>View Live Site </p> 
+                                <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+            <section class="portfolio-card mt-20">
+                <section class="flex">
+                    <div>
+                        <img class="gidigan-image" src="./images/portfolio.png" alt="">
+                    </div>
+                    <div class="gidigan-info pl-8">
+                        <p class="gidigan-info-text mt-10">'23 Portfolio Refresh</p>
+                        <p class="gidigan-brief mt-5">An updated portfolio of work, showing<br>increased aptitude and experience. </p>
+                        <div class="flex mt-14">
+                            <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
+                            <p class="ml-2.5 mt-7 timer-text">12 min read</p>
+                        </div>
+                        
+                    </div>
+                    <div class="grid justify-items-end card-cta">
+                        <div class="flex mt-10">
+                            <div class="project-type-btn flex">
+                                <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                <p class="browser-btn-text"> Website</p>
+                            </div>
+                            <div class="project-type-btn saas-btn ml-2.5">
+                                <p>Portfolio</p>
+                            </div>
+                        </div>
+                        <a class="" href="/portfolio-case-study" target="_blank">
+                            <div class="case-study-btn flex mt-28">
+                                <p>Read case study </p> 
+                                <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+
+            <section class="portfolio-card mt-20">
                 <section class="flex">
                     <div>
                         <img class="gidigan-image" src="./images/gidigan.png" alt="">
@@ -199,59 +276,22 @@
                         </div>
                         
                     </div>
-                    <div class="grid justify-items-end ml-60 left-margin">
+                    <div class="grid justify-items-end ml-52">
                         <div class="flex mt-10 ">
-                            <div class="project-type-btn flex browswer-btn">
+                            <div class="project-type-btn flex">
                                 <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
-                                <p class="browswer-btn-text"> Browser App</p>
+                                <p class="browser-btn-text"> Browser App</p>
                             </div>
                             <div class="project-type-btn saas-btn ml-2.5">
                                 <p>SaaS</p>
                             </div>
                         </div>
-                        <a class="" href="">
+                        <a class="" href="https://gidigan.com/" target="_blank">
                             <div class="case-study-btn flex mt-28">
-                                <p>Read case study </p> 
+                                <p>View Live Site </p> 
                                 <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
                             </div>
                         </a>
-                    </div>
-                </section>
-            </section>
-
-            <section class="portfolio-card mt-20">
-                <section class="flex">
-                    <div>
-                        <img class="betweysure-image" src="./images/betweysure.png" alt="">
-                    </div>
-                    <div class="gidigan-info pl-8">
-                        <p class="gidigan-info-text mt-10">Betweysure</p>
-                        <p class="gidigan-brief mt-5">Betweysure is a football forecast & prediction <br> platform for punters and gamblers </p>
-                        <div class="flex mt-14">
-                            <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
-                            <p class="ml-2.5 mt-7 timer-text">11 min read</p>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="grid justify-items-end ml-60 left-margin">
-                        <div class="flex mt-10 ">
-                            <div class="project-type-btn flex browswer-btn">
-                                <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
-                                <p class="browswer-btn-text"> Browser App</p>
-                            </div>
-                            <div class="project-type-btn saas-btn ml-2.5">
-                                <p>Sports</p>
-                            </div>
-                        </div>
-                        
-                        <a class="" href="">
-                            <div class="case-study-btn flex mt-28">
-                                <p>Read case study </p> 
-                                <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
-                            </div>
-                        </a>
-                        
                     </div>
                 </section>
             </section>
@@ -271,20 +311,57 @@
                         
                     </div>
                     
-                    <div class="ml-64 grid justify-items-end">
+                    <div class="grid justify-items-end ml-56">
                         <div class="flex mt-10 ">
-                            <div class="project-type-btn flex browswer-btn">
+                            <div class="project-type-btn flex">
                                 <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
-                                <p class="browswer-btn-text"> Browser App</p>
+                                <p class="browser-btn-text"> Browser App</p>
                             </div>
                             <div class="project-type-btn saas-btn ml-2.5">
                                 <p>Real Estate</p>
                             </div>
                         </div>
                         
-                        <a class="" href="">
+                        <a class="" href="https://www.behance.net/gallery/111156945/LiberTerra?log_shim_removal=1" target="_blank">
                             <div class="case-study-btn flex mt-28">
                                 <p>Read case study </p> 
+                                <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </section>
+            </section>
+
+            <section class="portfolio-card mt-20">
+                <section class="flex">
+                    <div>
+                        <img class="liberterra-image" src="./images/betweysure.png" alt="">
+                    </div>
+                    <div class="block gidigan-info pl-8">
+                        <p class="gidigan-info-text mt-10">Betweysure</p>
+                        <p class="gidigan-brief mt-5">Betweysure, a football forecast &<br>prediction platform for punters and gamblers</p>
+                        <div class="flex mt-14">
+                            <i class="ph-timer-bold" style="color: #9D9D9F; font-size: 20px;"></i>
+                            <p class="ml-2.5 mt-7 timer-text">11 min read</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="grid justify-items-end ml-52">
+                        <div class="flex mt-10 ">
+                            <div class="project-type-btn flex">
+                                <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                <p class="browser-btn-text"> Browser App</p>
+                            </div>
+                            <div class="project-type-btn saas-btn ml-2.5">
+                                <p>Sports</p>
+                            </div>
+                        </div>
+                        
+                        <a class="" href="https://www.figma.com/proto/NEzojk3JDCjyxVBpzbz87d/Betweysure?type=design&node-id=775-5575&t=MZ6CSOCd3UpHcDqT-1&scaling=scale-down-width&page-id=775%3A5574&starting-point-node-id=775%3A5575&mode=design" target="_blank">
+                            <div class="case-study-btn flex mt-28">
+                                <p>View Demo </p> 
                                 <i class="ph-arrow-line-up-right mb-2.5" style="color: #9D9D9F; font-size: 24px;"></i>
                             </div>
                         </a>
@@ -297,85 +374,123 @@
         
 
          <!-- portfolio grid hidden by default-->
-        <section id="grid">
-            <section class="flex">
-                <section class="portfolio-grid mt-5">
-                <!-- <img src="./images/gidigan-grid.png" alt=""> -->
-                    <div class="portfolio-grid-info flex content-end">
-                        <div>
-                        <p class="gidigan-info-text gidigan-grid-info-text">Gidigan</p>
-                            <div class="">
-                                <div class="flex mt-5">
-                                    <div class="project-type-btn flex browswer-btn">
-                                        <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
-                                        <p class="browswer-btn-text"> Browser App</p>
-                                    </div>
-                                    <div class="project-type-btn saas-btn ml-2.5">
-                                        <p>Real Estate</p>
-                                    </div>
-                                </div>
-                                <!-- <div>
-                                    <a href="">Read case study <i class="ph-arrow-line-up-right" style="color: #9D9D9F; font-size: 16px;"></i></a>
-                                </div> -->
-                                
-                            </div>
-                        </div>
+         
+        <section id="grid" class="">
+            <div class="grid-container">
+               
+
+                <a href="https://pivo.africa/" target="_blank"> <div class="grid-item">
+
+                    <section class="portfolio-grid portfolio-grid-pivo mt-5">
                 
-
-                    </div>
-                </section>
-
-                <section class="portfolio-grid portfolio-grid-betweysure mt-5 ml-20">
-                    <div class="portfolio-grid-info flex content-end">
-                        <div>
-                            <p class="gidigan-info-text gidigan-grid-info-text">Betweysure</p>
-                            <div class="">
-                                <div class="flex mt-5">
-                                    <div class="project-type-btn flex browswer-btn">
-                                        <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
-                                        <p class="browswer-btn-text"> Browser App</p>
-                                    </div>
-                                    <div class="project-type-btn saas-btn ml-2.5">
-                                        <p>Real Estate</p>
+                        <div class="portfolio-grid-info flex content-end">
+                            <div>
+                                <p class="gidigan-info-text gidigan-grid-info-text">Pivo</p>
+                                <div class="">
+                                    <div class="flex mt-5">
+                                        <div class="project-type-btn flex browser-btn">
+                                            <i class="ph ph-app-window mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                            <p class="browser-btn-text"> Web & Mobile Apps</p>
+                                        </div>
+                                        <div class="project-type-btn saas-btn ml-2.5">
+                                            <p>Paas</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- <div>
-                                    <a href="">Read case study <i class="ph-arrow-line-up-right" style="color: #9D9D9F; font-size: 16px;"></i></a>
-                                </div> -->
-                                    
                             </div>
                         </div>
-                    
+                    </section>
+                   
+                </div></a>
 
-                    </div>
-                </section>
-            </section>
+                <a href="/portfolio-case-study" target="_blank"> <div class="grid-item">
+                    <section class="portfolio-grid portfolio-grid-portfolio mt-5">
+                        <div class="portfolio-grid-info flex content-end">
+                            <div>
+                            <p class="gidigan-info-text gidigan-grid-info-text">'23 Portfolio Refresh'</p>
+                                <div class="">
+                                    <div class="flex mt-5">
+                                        <div class="project-type-btn flex browser-btn">
+                                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                            <p class="browser-btn-text"> Browser App</p>
+                                        </div>
+                                        <div class="project-type-btn saas-btn ml-2.5">
+                                            <p>Real Estate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            <section class="portfolio-grid portfolio-grid-liberterra mt-20">
+                        </div>
+                    </section>
+                </div></a>
+
+                <a href="https://gidigan.com/" target="_blank"> <div class="grid-item">
+                    <section class="portfolio-grid mt-5">
+                
+                        <div class="portfolio-grid-info flex content-end">
+                            <div>
+                                <p class="gidigan-info-text gidigan-grid-info-text">Gidigan</p>
+                                <div class="">
+                                    <div class="flex mt-5">
+                                        <div class="project-type-btn flex browser-btn">
+                                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                            <p class="browser-btn-text"> Browser App</p>
+                                        </div>
+                                        <div class="project-type-btn saas-btn ml-2.5">
+                                            <p>Saas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div></a>
+                
+                <a href="https://www.behance.net/gallery/111156945/LiberTerra?log_shim_removal=1" target="_blank"> <div class="grid-item">
+                    <section class="portfolio-grid portfolio-grid-liberterra mt-5">
             
-                    <div class="portfolio-grid-info flex content-end">
-                        <div>
-                        <p class="gidigan-info-text gidigan-grid-info-text">LiberTerra</p>
-                            <div class="">
-                                <div class="flex mt-5">
-                                    <div class="project-type-btn flex browswer-btn">
-                                        <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
-                                        <p class="browswer-btn-text"> Browser App</p>
-                                    </div>
-                                    <div class="project-type-btn saas-btn ml-2.5">
-                                        <p>Real Estate</p>
+                        <div class="portfolio-grid-info flex content-end">
+                            <div>
+                            <p class="gidigan-info-text gidigan-grid-info-text">LiberTerra</p>
+                                <div class="">
+                                    <div class="flex mt-5">
+                                        <div class="project-type-btn flex browser-btn">
+                                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                            <p class="browser-btn-text"> Browser App</p>
+                                        </div>
+                                        <div class="project-type-btn saas-btn ml-2.5">
+                                            <p>Real Estate</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- <div>
-                                    <a href="">Read case study <i class="ph-arrow-line-up-right" style="color: #9D9D9F; font-size: 16px;"></i></a>
-                                </div> -->
-                                
                             </div>
                         </div>
-                
+                    </section>
+                </div></a>
 
-                    </div>
-            </section>
+                <a href="https://www.figma.com/proto/NEzojk3JDCjyxVBpzbz87d/Betweysure?type=design&node-id=775-5575&t=MZ6CSOCd3UpHcDqT-1&scaling=scale-down-width&page-id=775%3A5574&starting-point-node-id=775%3A5575&mode=design" target="_blank"> <div class="grid-item">
+                    <section class="portfolio-grid portfolio-grid-betweysure mt-5">
+                        <div class="portfolio-grid-info flex content-end">
+                            <div>
+                                <p class="gidigan-info-text gidigan-grid-info-text">Betweysure</p>
+                                <div class="">
+                                    <div class="flex mt-5">
+                                        <div class="project-type-btn flex browser-btn">
+                                            <i class="ph-globe mb-2" style="color: #9D9D9F; font-size: 16px;"></i>
+                                            <p class="browser-btn-text"> Browser App</p>
+                                        </div>
+                                        <div class="project-type-btn saas-btn ml-2.5">
+                                            <p>Real Estate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div></a>
+            </div>
         </section> 
         
         <!-- portfolio grid ends-->
@@ -387,18 +502,18 @@
     <footer class="mt-12 mb-40">
         
         <h2 class="footer-text">
-            Enjoying yourself? 😅
+            Got something to build?
         </h2>
         <h2 class="footer-text">
-            Let's Talk!
+            Let’s Talk! 😅
         </h2>
         <p class="footer-text-two">I'd love to hear about your next big idea.</p>
         <div class="flex gap-14">
-            <a href=""><i class="ph-envelope-open" style="color: #9D9D9F; font-size: 50px;"></i></a>
-            <a href=""><i class="ph-medium-logo" style="color: #9D9D9F; font-size: 50px;"></i></a>
-            <a href=""><i class="ph-linkedin-logo" style="color: #9D9D9F; font-size: 50px;"></i></a>
+            <a href="mailto:akenenna@gmail.com" target="_blank"><i class="ph-envelope-open" style="color: #9D9D9F; font-size: 50px;"></i></a>
+            <a href="https://www.linkedin.com/in/kene-anyaegbunam/" target="_blank"><i class="ph-medium-logo" style="color: #9D9D9F; font-size: 50px;"></i></a>
+            <a href="https://medium.com/@_Kenenna" target="_blank"><i class="ph-linkedin-logo" style="color: #9D9D9F; font-size: 50px;"></i></a>
         </div>
-        <p class="copyrights">Designed by Me <span class="divider mr-5 ml-2.5"></span> Developed by <a href=""> Sarah</a></p>
+        <p class="copyrights">Designed by Me <span class="divider mr-5 ml-2.5"></span> Developed by <a href="https://sarah-adewale.netlify.app/" target="_blank"> Sarah</a></p>
         <!-- <div class="cta" style="border: 1px solid red;">
             <i class="ph-bold ph-arrow-circle-up" style="color: #FCFCFC; font-size: 32px;"></i>
         </div> -->
