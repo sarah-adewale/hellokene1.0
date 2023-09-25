@@ -1435,3 +1435,31 @@ footer {
     font-weight: 400;
     line-height: 2.4rem;
 }
+
+.case-study-project-type-btn {
+    width: 85px;
+    height: 32px;
+    border-radius: 100px;
+    background: var(--black-90, #232327);
+    color: var(--black-20, #CECECF);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.6rem;
+
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+
+    /* 171.429% */
+    /* 171.429% */
+}
+
+.footer-section {
+    background: url(./footer-backgroud.png);
+    width: 1016px;
+    height: 307px;
+    flex-shrink: 0;
+}
