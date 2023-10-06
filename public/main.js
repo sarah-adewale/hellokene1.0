@@ -1,9 +1,3 @@
-const trayFilterBtn = document.getElementById('tray-filter')
-const gridFilterBtn = document.getElementById('grid-filter')
-const tray = document.getElementById('tray')
-const grid = document.getElementById('grid')
-const trayFilterIcon = document.querySelector('.ph-list-fill')
-const gridFilterIcon = document.querySelector('.ph-grid-four-thin')
 const workHistory = document.getElementById('work-history')
 const skill = document.getElementById('skill')
 const aboutBio = document.getElementById('about-bio')
@@ -22,34 +16,106 @@ const aiIconHover = document.getElementById('ai-icon-hover')
 const psIconHover = document.getElementById('ps-icon-hover')
 const figmaIconHover = document.getElementById('figma-icon-hover')
 const figmaIcon = document.getElementById('figma-icon')
+const emptyState = document.getElementById('empty-state')
+const projectLinks = document.querySelectorAll(".portfolio-nav-links a");
+const gridButton = document.getElementById("grid-filter");
+const listButton = document.getElementById("tray-filter");
+const projects = document.querySelector(".projects");
+const projectItems = document.querySelectorAll(".project-item");
+const pivoListView = document.querySelector('.pivo-project-list-view')
+const pivoGridView = document.querySelector('.pivo-project-grid-view')
+const portfolioListView = document.querySelector('.portfolio-project-list-view')
+const portfolioGridView = document.querySelector('.potfolio-project-grid-view')
+const gidiganListView = document.querySelector('.gidigan-project-list-view')
+const gidiganGridView = document.querySelector('.gidigan-project-grid-view')
+const liberterraListView = document.querySelector('.liberterra-project-list-view')
+const liberterraGridView = document.querySelector('.liberterra-project-grid-view')
+const betweysureListView = document.querySelector('.betweysure-project-list-view')
+const betweysureGridView = document.querySelector('.betweysure-project-grid-view')
+const trayFilterIcon = document.querySelector('.ph-list-fill')
+const gridFilterIcon = document.querySelector('.ph-grid-four-thin')
 
 
-//page load
-window.onload = () => {
-  hide(grid)
-}
 
-// filter
-const addFilterEvents = (trayFilterBtn, gridFilterBtn, tray, grid, trayFilterIcon, gridFilterIcon) => {
-  trayFilterBtn.addEventListener('click', () => {
-    if(tray){
-      show(tray)
-      hide(grid)
-      trayFilterIcon.style.color = 'white'
-      gridFilterIcon.style.color = '#9D9D9F'
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    // Function to toggle between list and grid view
+    function toggleView(view) {
+        if (view === "grid") {
+            projects.classList.remove("list-view");
+            pivoListView.classList.add("hidden")
+            pivoGridView.classList.remove("hidden")
+            portfolioListView.classList.add("hidden")
+            portfolioGridView.classList.remove("hidden")
+            gidiganListView.classList.add("hidden")
+            gidiganGridView.classList.remove("hidden")
+            liberterraListView.classList.add("hidden")
+            liberterraGridView.classList.remove("hidden")
+            betweysureListView.classList.add("hidden")
+            betweysureGridView.classList.remove("hidden")
+        } else {
+            projects.classList.add("list-view");
+            pivoListView.classList.remove("hidden")
+            pivoGridView.classList.add("hidden")
+            portfolioListView.classList.remove("hidden")
+            portfolioGridView.classList.add("hidden")
+            gidiganListView.classList.remove("hidden")
+            gidiganGridView.classList.add("hidden")
+            liberterraListView.classList.remove("hidden")
+            liberterraGridView.classList.add("hidden")
+            betweysureListView.classList.remove("hidden")
+            betweysureGridView.classList.add("hidden")
+        }
     }
-  });
 
-  gridFilterBtn.addEventListener('click', () => {
-    if(grid){
-      hide(tray)
-      show(grid)
+    // Function to handle link clicks
+    function handleLinkClick(event) {
+        event.preventDefault();
+        projectLinks.forEach(link => link.classList.remove("active"));
+        event.target.classList.add("active");
+
+        const linkIndex = Array.from(projectLinks).indexOf(event.target);
+
+        // Hide all project items
+        projectItems.forEach(item => item.classList.add("hidden"));
+
+      
+        if (linkIndex === 0) {
+            // Show the first 3 projects
+            projectItems[0].classList.remove("hidden");
+            projectItems[1].classList.remove("hidden");
+            projectItems[2].classList.remove("hidden");
+        } else if (linkIndex === 1) {
+            // Show only the first project
+            projectItems[0].classList.remove("hidden");
+        } else if (linkIndex === 2) {
+            // Show all 5 projects
+            projectItems.forEach(item => item.classList.remove("hidden"));
+        } else if (linkIndex === 3) {
+            // Show an empty state (all hidden)
+        }
+    }
+
+    // Add click event listeners
+    projectLinks.forEach(link => link.addEventListener("click", handleLinkClick));
+
+    gridButton.addEventListener("click", () => {
+      toggleView("grid")
       trayFilterIcon.style.color = '#9D9D9F'
-      gridFilterIcon.style.color = 'white'
-    }
-  });
-};
-addFilterEvents(trayFilterBtn, gridFilterBtn, tray, grid, trayFilterIcon, gridFilterIcon);
+      gridFilterIcon.style.color = 'white'});
+    
+      listButton.addEventListener("click", () => {
+      toggleView("list")
+       trayFilterIcon.style.color = 'white'
+       gridFilterIcon.style.color = '#9D9D9F'
+    });
+
+    // set the default view and handle link clicks
+    toggleView("list");
+    projectLinks[0].click(); // Simulate a click on the first link
+});
+
 
 
 //about
@@ -167,3 +233,10 @@ const show = (element) => {
     element.style.display = 'block'
   }
 }
+
+
+
+
+
+
+
