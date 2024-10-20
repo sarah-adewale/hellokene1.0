@@ -21,7 +21,7 @@ const projectLinks = document.querySelectorAll(".portfolio-nav-links a");
 const gridButton = document.getElementById("grid-filter");
 const listButton = document.getElementById("tray-filter");
 const projects = document.querySelector(".projects");
-const projectItems = document.querySelectorAll(".project-item");
+const projectItems = document.querySelectorAll(".project-item"); 
 const pivoListView = document.querySelector('.pivo-project-list-view')
 const pivoGridView = document.querySelector('.pivo-project-grid-view')
 const portfolioListView = document.querySelector('.portfolio-project-list-view')
@@ -32,6 +32,8 @@ const liberterraListView = document.querySelector('.liberterra-project-list-view
 const liberterraGridView = document.querySelector('.liberterra-project-grid-view')
 const betweysureListView = document.querySelector('.betweysure-project-list-view')
 const betweysureGridView = document.querySelector('.betweysure-project-grid-view')
+const illustrationsListView = document.querySelector('.illustration-project-list-view')
+const illustrationsGridView = document.querySelector('.illustration-project-grid-view')
 const trayFilterIcon = document.querySelector('.ph-list-fill')
 const gridFilterIcon = document.querySelector('.ph-grid-four-thin')
 
@@ -54,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
             liberterraGridView.classList.remove("hidden")
             betweysureListView.classList.add("hidden")
             betweysureGridView.classList.remove("hidden")
+            illustrationsListView.classList.add("hidden")
+            illustrationsGridView.classList.remove("hidden")
         } else {
             projects.classList.add("list-view");
             pivoListView.classList.remove("hidden")
@@ -66,6 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
             liberterraGridView.classList.add("hidden")
             betweysureListView.classList.remove("hidden")
             betweysureGridView.classList.add("hidden")
+            illustrationsListView.classList.remove("hidden")
+            illustrationsGridView.classList.add("hidden")
+           
         }
     }
 
@@ -76,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.target.classList.add("active");
 
         const linkIndex = Array.from(projectLinks).indexOf(event.target);
-
+        const emptyState = document.querySelector('.empty-state')
         // Hide all project items
         projectItems.forEach(item => item.classList.add("hidden"));
 
@@ -86,14 +93,19 @@ document.addEventListener("DOMContentLoaded", () => {
             projectItems[0].classList.remove("hidden");
             projectItems[1].classList.remove("hidden");
             projectItems[2].classList.remove("hidden");
+         
         } else if (linkIndex === 1) {
             // Show only the first project
             projectItems[0].classList.remove("hidden");
+            projectItems[1].classList.remove("hidden");
+           
         } else if (linkIndex === 2) {
-            // Show all 5 projects
-            projectItems.forEach(item => item.classList.remove("hidden"));
+            projectItems[2].classList.remove("hidden");
+            projectItems[3].classList.remove("hidden");
+            projectItems[4].classList.remove("hidden");
+         
         } else if (linkIndex === 3) {
-            // Show an empty state (all hidden)
+          projectItems[5].classList.remove("hidden");
         }
     }
 
@@ -235,7 +247,391 @@ const show = (element) => {
 }
 
 
+const setupCardHover = (elements, stylesOnHover) => {
+  const addStyle = (element, styles) => Object.assign(element.style, styles);
 
+  const resetStyles = () => {
+    Object.keys(elements).forEach(key => elements[key].style = '');
+  };
+
+  elements.container.addEventListener('mousemove', () => {
+    addStyle(elements.card, stylesOnHover);
+    show(elements.imgHover);
+    hide(elements.img);
+
+    addStyle(elements.text, { color: '#FCFCFC' });
+    addStyle(elements.textSubtitle, { color: '#CECECF' });
+    addStyle(elements.timerIcon, { color: '#CECECF' });
+    addStyle(elements.timerText, { color: '#FCFCFC' });
+    addStyle(elements.hoverBtn, { backgroundColor: '#FCFCFC', boxShadow: 'none' });
+    addStyle(elements.btnText, { color: '#0B0A0F' });
+    addStyle(elements.btnArrow, { color: '#001433' });
+    addStyle(elements.cat, { border: '1px solid #CECECF' });
+    addStyle(elements.catIcon, { color: '#CECECF' });
+    addStyle(elements.catText, { color: '#FCFCFC' });
+    addStyle(elements.cat2, { border: '1px solid #CECECF' });
+    addStyle(elements.catText2, { color: '#FCFCFC' });
+  });
+
+  elements.container.addEventListener('mouseout', () => {
+    resetStyles();
+    hide(elements.imgHover);
+    show(elements.img);
+
+  });
+};
+
+const projectPivoHover = () => {
+  const pivoElements = {
+    card: document.querySelector('.pivo-portfolio-card'),
+    container: document.querySelector('.pivo-project-list-view'),
+    imgHover: document.querySelector('.pivo-hover-img'),
+    img: document.querySelector('.pivo-img'),
+    text: document.querySelector('.pivo-text'),
+    textSubtitle: document.querySelector('.pivo-text-subtitle'),
+    timerIcon: document.querySelector('.timer-icon'),
+    timerText: document.querySelector('.timer-text'),
+    hoverBtn: document.querySelector('.pivo-hover-btn'),
+    btnText: document.querySelector('.pivo-btn-text'),
+    btnArrow: document.querySelector('.pivo-btn-hover-icon'),
+    cat: document.querySelector('.project-type-btn'),
+    catIcon: document.querySelector('.ph-app-window'),
+    catText: document.querySelector('.browser-btn-text'),
+    cat2: document.querySelector('.saas-btn'),
+    catText2: document.querySelector('.project-type-text'),
+  };
+
+  const stylesOnHover = {
+    backgroundColor: '#001433',
+    cursor: 'pointer',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+    border: '1px solid #E4F8E4',
+    transition: '0.7s ease-in-out',
+    // Add any additional styles for the hover state here
+  };
+
+  setupCardHover(pivoElements, stylesOnHover);
+};
+projectPivoHover()
+
+const portfolioCardHover = () => {
+
+  const portfolioElements = {
+
+    card: document.querySelector('.port-card'),
+    container: document.querySelector('.portfolio-project-list-view'),
+    imgHover: document.querySelector('.portfolio-hover-img'),
+    img: document.querySelector('.portfolio-img'),
+    text: document.querySelector('.portfolio-text'),
+    textSubtitle: document.querySelector('.portfolio-text-subtitle'),
+    timerIcon: document.querySelector('.portfolio-timer-icon'),
+    timerText: document.querySelector('.portfolio-timer-text'),
+    hoverBtn: document.querySelector('.portfolio-hover-btn'),
+    btnText: document.querySelector('.portfolio-btn-text'),
+    btnArrow: document.querySelector('.portfolio-btn-hover-icon'),
+    cat: document.querySelector('.portfolio-cat-border'),
+    catIcon: document.querySelector('.portfolio-ph-globe'),
+    catText: document.querySelector('.portflio-browser-btn-text'),
+    cat2: document.querySelector('.portfolio-saas-btn'),
+    catText2: document.querySelector('.portfolio-project-type-text'),
+  };
+
+  const stylesOnHover = {
+    backgroundColor: '#0B0A0F',
+    cursor: 'pointer',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+    border: '1px solid #E4F8E4',
+    transition: '0.7s ease-in-out',
+    // Specify the styles for the other card hover state here
+  };
+
+  setupCardHover(portfolioElements, stylesOnHover);
+};
+
+portfolioCardHover()
+
+const gidiganCardHover = () => {
+
+  const gidiganElements = {
+
+    card: document.querySelector('.gidigan-portfolio-card'),
+    container: document.querySelector('.gidigan-project-list-view'),
+    imgHover: document.querySelector('.gidigan-hover-img'),
+    img: document.querySelector('.gidigan-img'),
+    text: document.querySelector('.gidigan-text'),
+    textSubtitle: document.querySelector('.gidigan-text-subtitle'),
+    timerIcon: document.querySelector('.gidigan-timer-icon'),
+    timerText: document.querySelector('.gidigan-timer-text'),
+    hoverBtn: document.querySelector('.gidigan-hover-btn'),
+    btnText: document.querySelector('.gidigan-btn-text'),
+    btnArrow: document.querySelector('.gidigan-btn-hover-icon'),
+    cat: document.querySelector('.gidigan-cat-border'),
+    catIcon: document.querySelector('.gidigan-ph-globe'),
+    catText: document.querySelector('.gidigan-browser-btn-text'),
+    cat2: document.querySelector('.gidigan-saas-btn'),
+    catText2: document.querySelector('.gidigan-project-type-text'),
+  }
+
+  const stylesOnHover = {
+    backgroundColor: '#0B0A0F',
+    cursor: 'pointer',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+    border: '1px solid #E4F8E4',
+    transition: '0.7s ease-in-out',
+    // Specify the styles for the other card hover state here
+  };
+
+  setupCardHover(gidiganElements, stylesOnHover);
+}
+
+gidiganCardHover()
+
+const liberterraCardHover = () => {
+
+  liberterraElements = {
+
+    card: document.querySelector('.liberterra-portfolio-card'),
+    container: document.querySelector('.liberterra-project-list-view'),
+    imgHover: document.querySelector('.liberterra-hover-img'),
+    img: document.querySelector('.liberterra-img'),
+    text: document.querySelector('.liberterra-text'),
+    textSubtitle: document.querySelector('.liberterra-text-subtitle'),
+    timerIcon: document.querySelector('.liberterra-timer-icon'),
+    timerText: document.querySelector('.liberterra-timer-text'),
+    hoverBtn: document.querySelector('.liberterra-hover-btn'),
+    btnText: document.querySelector('.liberterra-btn-text'),
+    btnArrow: document.querySelector('.liberterra-btn-hover-icon'),
+    cat: document.querySelector('.liberterra-cat-border'),
+    catIcon: document.querySelector('.liberterra-ph-globe'),
+    catText: document.querySelector('.liberterra-browser-btn-text'),
+    cat2: document.querySelector('.liberterra-saas-btn'),
+    catText2: document.querySelector('.liberterra-project-type-text'),
+
+  }
+
+  const stylesOnHover = {
+    backgroundColor: '#182C18',
+    cursor: 'pointer',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+    border: '1px solid #E4F8E4',
+    transition: '0.7s ease-in-out',
+    // Specify the styles for the other card hover state here
+  };
+
+  setupCardHover(liberterraElements, stylesOnHover);
+}
+
+liberterraCardHover()
+
+const betweysureCardHover = () => {
+
+  const betweysureElements = {
+    card: document.querySelector('.betweysure-portfolio-card'),
+    container: document.querySelector('.betweysure-project-list-view'),
+    imgHover: document.querySelector('.betweysure-hover-img'),
+    img: document.querySelector('.betweysure-img'),
+    text: document.querySelector('.betweysure-text'),
+    textSubtitle: document.querySelector('.betweysure-text-subtitle'),
+    timerIcon: document.querySelector('.betweysure-timer-icon'),
+    timerText: document.querySelector('.betweysure-timer-text'),
+    hoverBtn: document.querySelector('.betweysure-hover-btn'),
+    btnText: document.querySelector('.betweysure-btn-text'),
+    btnArrow: document.querySelector('.betweysure-btn-hover-icon'),
+    cat: document.querySelector('.betweysure-cat-border'),
+    catIcon: document.querySelector('.betweysure-ph-globe'),
+    catText: document.querySelector('.betweysure-browser-btn-text'),
+    cat2: document.querySelector('.betweysure-saas-btn'),
+    catText2: document.querySelector('.betweysure-project-type-text'),
+  }
+
+  const stylesOnHover = {
+    backgroundColor: '#004047',
+    cursor: 'pointer',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+    border: '1px solid #E4F8E4',
+    transition: '0.7s ease-in-out',
+    // Specify the styles for the other card hover state here
+  };
+
+  setupCardHover(betweysureElements, stylesOnHover)
+}
+
+betweysureCardHover()
+
+const projectGridHover = () => {
+  const pivoGridHover = document.querySelector('.pivo-project-grid-view')
+  const pivoGridCard = document.querySelector('.grid-info')
+  const portfolioGridHover = document.querySelector('.potfolio-project-grid-view')
+  const gidiganGridHover = document.querySelector('.gidigan-project-grid-view')
+  const liberterraGridHover = document.querySelector('.liberterra-project-grid-view')
+  const betweysureGridHover = document.querySelector('.betweysure-project-grid-view')
+  const betweysureGridCard = document.querySelector('.grid-info-betweysure')
+  const liberterraGridCard = document.querySelector('.grid-info-liberterra')
+  const gidiganGridCard = document.querySelector('.grid-info-gidigan')
+  const portfolioGridCard = document.querySelector('.grid-info-portfolio')
+
+// pivo
+  pivoGridHover.addEventListener('mouseover', () => {
+    hide(pivoGridCard)
+    
+  })
+
+  pivoGridHover.addEventListener('mouseout', () => {
+    show(pivoGridCard)
+   
+  })
+
+  // portfolio
+  portfolioGridHover.addEventListener('mouseover', () => {
+    hide(portfolioGridCard)
+    
+  })
+
+  portfolioGridHover.addEventListener('mouseout', () => {
+    show(portfolioGridCard)
+   
+  })
+
+  // gidigan
+  gidiganGridHover.addEventListener('mouseover', () => {
+    hide(gidiganGridCard)
+    
+  })
+
+  gidiganGridHover.addEventListener('mouseout', () => {
+    show(gidiganGridCard)
+   
+  })
+
+  // liberterra
+  liberterraGridHover.addEventListener('mouseover', () => {
+    hide(liberterraGridCard)
+    
+  })
+
+  liberterraGridHover.addEventListener('mouseout', () => {
+    show(liberterraGridCard)
+   
+  })
+
+  // betweysure
+  betweysureGridHover.addEventListener('mouseover', () => {
+    hide(betweysureGridCard)
+    
+  })
+
+  betweysureGridCard.addEventListener('mouseout', () => {
+    show(betweysureGridCard)
+   
+  })
+}
+
+projectGridHover() 
+
+
+const footerIconHover = () => {
+  const mediumIcon = document.getElementById('medium-icon')
+  const emailIcon = document.getElementById('email-icon')
+  const linkedinIcon = document.getElementById('linkedin-icon')
+
+  mediumIcon.addEventListener('mouseover', () => {
+   
+    
+    emailIcon.style.marginRight = '140px'
+    emailIcon.style.transition = '0.5s ease-in-out'
+    linkedinIcon.style.marginLeft = '30px'
+  })
+
+  mediumIcon.addEventListener('mouseout', () => {
+ 
+    
+    emailIcon.style.marginRight = ''
+    emailIcon.style.transition = '0.5s ease-in-out'
+    linkedinIcon.style.marginLeft = ''
+  })
+
+  linkedinIcon.addEventListener('mouseover', () => {
+    mediumIcon.style.marginRight = '140px'
+    mediumIcon.style.transition = '0.5s ease-in-out'
+  })
+
+  linkedinIcon.addEventListener('mouseout', () => {
+    mediumIcon.style.marginRight = ''
+    mediumIcon.style.transition = '0.5s ease-in-out'
+  })
+}
+
+footerIconHover()
+
+// test
+
+const toggleFullScreenButton = document.querySelector('.button')
+
+toggleFullScreenButton.addEventListener('click', toggleFullScreen);
+
+function toggleFullScreen() {
+  
+    const image = document.querySelector('.image');
+    if (!document.fullscreenElement) {
+        image.requestFullscreen().catch(err => {
+            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        });
+        console.log('works')
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+
+
+// const newToggleFullScreen = () => {
+//   const showFullScreenButton = document.querySelector('.container')
+//   const imageToBeEnlarged = document.querySelector('.image');
+
+//   showFullScreenButton.addEventListener("click", () => {
+//     if(!document.fullscreenElement){
+//       imageToBeEnlarged.requestFullscreen().catch(err => {
+//         alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+//       });
+//     }else{
+//       document.exitFullscreen();
+//     }
+//     console.log('works')
+//   } )
+// }
+
+// newToggleFullScreen()
+
+// function newToggleFullScreen(){
+//   const fullScreenButton = document.querySelector('.button');
+//   const imageToBeEnlarged = document.querySelector('.image');
+
+//   fullScreenButton.addEventListener("click", () => {
+//     if (!document.fullscreenElement) {
+//       imageToBeEnlarged.requestFullscreen().catch(err => {
+//         alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+//       });
+//     } else {
+//       document.exitFullscreen();
+//     }
+//     console.log('works');
+//   });
+// }
+
+// newToggleFullScreen();
+
+// function toggleFullScreen() {
+//   const image = document.querySelector('.image');
+//   if (!document.fullscreenElement) {
+//       image.requestFullscreen().catch(err => {
+//           alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+//       });
+//       console.log('works');
+//   } else {
+//       document.exitFullscreen();
+//   }
+ 
+// }
 
 
 
