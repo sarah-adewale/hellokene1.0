@@ -69,6 +69,12 @@ i {
     padding: 18px 192px;
 }
 
+.kene-logo-img {
+    margin-top: 5px;
+    width: 20px; /* Adjust logo size for mobile */
+   /* border: 1px solid red; */
+}
+
 .timer-icon {
     color: #9D9D9F;
     font-size: 20px;
@@ -166,6 +172,10 @@ i {
 
 .profile-image-section {
     margin-top: 30px;
+}
+
+.profile-image{
+    width: 60%;
 }
 
 .skills-background {
@@ -358,8 +368,20 @@ i {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
+    width: 300px;
     color: #6D6C6F;
     margin-left: 10px;
+}
+
+.kene-logo-white{
+    width: 120px;
+    border: 1px solid red;
+}
+
+.work-logo{
+    margin-left: 120px;
+    width: 40%;
+
 }
 
 .pivo-logo-text {
@@ -377,6 +399,7 @@ i {
 
 .portfolio-container {
     padding: 18px 192px;
+    display: block;
 }
 
 .portfolio-category li {
@@ -393,6 +416,7 @@ i {
     height: 56px;
     flex-direction: row;
     justify-content: space-between;
+    /* display: block; */
 }
 
 .portfolio-category-text {
@@ -1818,4 +1842,451 @@ footer {
 .container:hover .button {
     display: block;
     right: 10px;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    background: #232327; /* Same as your sun-circle background */
+    border-radius: 100%; /* Makes it circular */
+    width: 38px; /* Same as sun-circle width */
+    height: 38px; /* Same as sun-circle height */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #FCFCFC;
+    z-index: 1002;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.mobile-click-exp-section{
+    display: none;
+}
+
+.portfolio-tab-mobile{
+    display: none;
+}
+
+/* Base styles for desktop and larger screens */
+
+/* Mobile styles */
+@media (max-width: 480px) {
+ 
+    header {
+        /* padding: 10px 20px;
+        flex-direction: column;
+        height: auto; */
+        /* display: flex;
+        flex-direction: row;
+        padding: 18px 192px;
+        position: fixed;
+    
+        height: 80px; */
+        /* background: rgba(11, 10, 15, 0.3);
+        backdrop-filter: blur(8px); */
+        background: red;
+        display: flex;
+        justify-content: flex-end;
+        align-content: end;
+        align-items: end;
+        /* z-index: 1000; */
+        bottom: 0; /* Position at bottom */
+        left: 0;
+        position: relative; /* Ensure positioning context for hamburger */
+        padding: 10px 20px;
+        width: 100%; /* Fix the fixed width */
+        height: auto;
+    }
+
+    .left-nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    .profile-section {
+        padding-top: 10%;
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-text-section {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .profile-text-section>p,
+    .profile-text-section>p~div {
+        font-weight: 700;
+        /* padding-top: 6.0%; */
+        font-size: 2.2rem;
+        line-height: 3.8rem;
+        color: #FCFCFC;
+        width: 400px;
+        text-align: center;
+    }
+
+    .profile-text-section>p{
+       
+        margin-top: -100px;
+    }
+
+    .profile-text-section>p~div{
+        border: 1px solid red;
+        margin-top: -20px;
+        display: none;
+    }
+
+    .exp-btn-info{
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+        margin-bottom: 15px;
+        color: #6D6C6F;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    .mobile-exp-skills-text{
+        font-size: 1.4rem;
+        color: #E7E7E7;
+    }
+
+    .mobile-click-exp-section{
+        display: block;
+    }
+    
+    .hero-container{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+ 
+    }
+
+ 
+
+    .right-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(35, 35, 39, 0.95);
+        backdrop-filter: blur(8px);
+        margin: 0;
+        padding: 80px 20px 20px;
+        flex-direction: column;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .right-nav.active {
+        right: 0;
+        display: flex;
+    }
+
+    .right-nav > li {
+        margin: 20px 0;
+    }
+
+    /* Hamburger animation */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Prevent scrolling when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .mobile-click-exp-section{
+        display: block;
+        margin-top: 40px;
+    }
+
+    .mobile-experience-skills-btn{
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 16px;
+        gap: 8px;
+        background: #232327;
+        border-radius: 100px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    .portfolio-container{
+        display: none;
+    }
+   
+    .mobile-experience-skills-section{
+        display: flex;
+        gap: 7px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-section2{
+        /* border: 1px solid red; */
+        margin-top: 20px;
+        margin-left: 65px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-image{
+        width: 80%;
+    }
+
+    .profile-status{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-left: -170px;
+    }
+
+    .profile-status-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        width: 150px;
+        color: #6D6C6F;
+        margin-right: 30px;
+    }
+
+    .work-logo{
+       margin-left: 210px;
+    }
+    .portfolio-tab-mobile {
+        display: block;
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .tab-scroll-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+
+    .tab-scroll-container::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
+    .tab-list {
+        display: flex;
+        gap: 20px;
+        padding: 0 20px;
+        min-width: max-content;
+        
+    }
+    .tab-list li{
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+    }
+
+    .tab-item {
+        font-size: 1.6rem;
+        color: #979494;
+        padding: 8px 16px;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .tab-item.active {
+        color: #FCFCFC;
+        position: relative;
+    }
+
+    .tab-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 16px;
+        right: 16px;
+        height: 2px;
+        background: #FCFCFC;
+    }
+
+    .tab-content {
+        margin-top: 24px;
+        padding: 0 20px;
+    }
+
+    .tab-panel {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .tab-panel.active {
+        display: flex;
+    }
+
+    .tab-panel img {
+        width: 100%;
+        border-radius: 12px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+    }
+
+    .tab-panel-text {
+        padding: 16px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tab-panel-text h3 {
+        font-size: 2rem;
+        color: #FCFCFC;
+        margin-bottom: 8px;
+    }
+
+    .tab-panel-text p {
+        font-size: 1.4rem;
+        color: #9D9D9F;
+        line-height: 1.5;
+    }
+
+    .mobile-portfolio-border{
+        background: #0B0A0F;
+        border: 1px solid #6D6C6F;
+        border-radius: 16px;
+
+    }
+
+    .portfolio-tags-container-mobile{
+        gap: 10px;
+       
+    }
+
+    .portfolio-read-time-mobile{
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .read-time-mobile{
+        margin-top: -3px;
+    }
+    .portfolio-tags{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 8px;
+        gap: 4px;
+        width: 151.5px;
+        height: 24px;
+        background: #232327;
+        border-radius: 100px;
+    }
+.read-btn-mobile{
+    /* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 16px;
+gap: 12px;
+
+width: 295px;
+height: 48px;
+
+/* White/100 */
+background: #FCFCFC;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+    .read-btn-mobile-link{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 15px;
+    }
+
+    .read-btn-mobile p{
+        color: #0B0A0F;
+        font-size: 1.6rem;
+    }
+    .footer-section {
+        background: url(./footer-backgroud.png);
+        width: 100%;
+        height: 307px;
+        flex-shrink: 0;
+    }
+
+    .footer-text{
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+    }
+
+    .footer-text-two {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    
+    }
 }

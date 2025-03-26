@@ -314,6 +314,39 @@ const projectPivoHover = () => {
 };
 projectPivoHover()
 
+const projectSmartPathwaysHover = () => {
+  const smartPathwaysElements = {
+    card: document.querySelector('.smart-pathways-portfolio-card'),
+    container: document.querySelector('.smart-pathways-project-list-view'),
+    imgHover: document.querySelector('.smart-pathways-hover-img'),
+    img: document.querySelector('.smart-pathways-img'),
+    text: document.querySelector('.smart-pathways-text'),
+    textSubtitle: document.querySelector('.smart-pathways-text-subtitle'),
+    timerIcon: document.querySelector('.timer-icon'),
+    timerText: document.querySelector('.timer-text'),
+    hoverBtn: document.querySelector('.pivo-hover-btn'),
+    btnText: document.querySelector('.pivo-btn-text'),
+    btnArrow: document.querySelector('.pivo-btn-hover-icon'),
+    cat: document.querySelector('.project-type-btn'),
+    catIcon: document.querySelector('.ph-app-window'),
+    catText: document.querySelector('.browser-btn-text'),
+    cat2: document.querySelector('.saas-btn'),
+    catText2: document.querySelector('.project-type-text'),
+  };
+
+  const stylesOnHover = {
+    backgroundColor: '#001433',
+    cursor: 'pointer',
+    boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+    border: '1px solid #E4F8E4',
+    transition: '0.7s ease-in-out',
+    // Add any additional styles for the hover state here
+  };
+
+  setupCardHover(smartPathwaysElements, stylesOnHover);
+};
+projectSmartPathwaysHover()
+
 const portfolioCardHover = () => {
 
   const portfolioElements = {
@@ -582,8 +615,49 @@ function toggleFullScreen() {
     }
 }
 
+// mobile menu
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const mobileMenu = document.querySelector('.right-nav');
+  const body = document.body;
 
+  hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      body.classList.toggle('menu-open');
+  });
 
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+      if (!mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('menu-open');
+      }
+  });
+});
+
+// Tab functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const tabItems = document.querySelectorAll('.tab-item');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabItems.forEach(tab => {
+      tab.addEventListener('click', () => {
+          // Remove active class from all tabs and panels
+          tabItems.forEach(item => item.classList.remove('active'));
+          tabPanels.forEach(panel => panel.classList.remove('active'));
+
+          // Add active class to clicked tab and corresponding panel
+          tab.classList.add('active');
+          const panelId = `${tab.dataset.tab}-panel`;
+          document.getElementById(panelId).classList.add('active');
+
+          // Scroll tab into view
+          tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+  });
+});
 // const newToggleFullScreen = () => {
 //   const showFullScreenButton = document.querySelector('.container')
 //   const imageToBeEnlarged = document.querySelector('.image');
